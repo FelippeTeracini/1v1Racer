@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5263304506816717400}
   - component: {fileID: 7882285086029977011}
   - component: {fileID: -5519022175537583514}
+  - component: {fileID: 4730156990445379822}
   m_Layer: 0
   m_Name: long_tires
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8227817312636931126}
-  m_LocalRotation: {x: -0, y: -0, z: 0.22927141, w: 0.97336257}
+  m_LocalRotation: {x: 0, y: 0, z: 0.22926833, w: 0.9733632}
   m_LocalPosition: {x: -2.09, y: -26.92, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
@@ -130,3 +131,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.41, y: 0.17}
   m_EdgeRadius: 0
+--- !u!114 &4730156990445379822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227817312636931126}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -1.1928011, y: -0.08210412, z: 0}
+  - {x: 1.2062062, y: -0.0892054, z: 0}
+  - {x: 1.2032789, y: 0.089788035, z: 0}
+  - {x: -1.1982276, y: 0.09187623, z: 0}
+  m_ShapePathHash: 736431978
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -9236

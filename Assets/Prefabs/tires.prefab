@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2775423288480042733}
   - component: {fileID: 2346154393388868011}
   - component: {fileID: 210767379772995846}
+  - component: {fileID: 822736217762156175}
   m_Layer: 0
   m_Name: tires
   m_TagString: Untagged
@@ -130,3 +131,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &822736217762156175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134810773585551491}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.3020645, y: -0.08677745, z: 0}
+  - {x: 0.29825565, y: -0.08002925, z: 0}
+  - {x: 0.30054122, y: 0.08906255, z: 0}
+  - {x: -0.3005411, y: 0.09504858, z: 0}
+  m_ShapePathHash: -588690941
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -19042

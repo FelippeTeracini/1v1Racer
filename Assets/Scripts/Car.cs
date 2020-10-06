@@ -24,9 +24,11 @@ public class Car : MonoBehaviour
     public AudioManager audioManager;
     public string accelerationAudio;
 
+    ParticleSystem smoke_ps;
+
     void Start()
     {
-
+        smoke_ps = transform.GetChild(0).transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -35,19 +37,24 @@ public class Car : MonoBehaviour
         {
             if (Input.GetButton(accelarationControl))
             {
-
                 if (!audioManager.IsPlaying(accelerationAudio))
                 {
                     audioManager.Play(accelerationAudio);
+                }
+                if (!smoke_ps.isPlaying)
+                {
+                    smoke_ps.Play();
                 }
             }
             if (Input.GetButtonUp(accelarationControl))
             {
                 audioManager.Stop(accelerationAudio);
+                smoke_ps.Stop();
             }
-            if (Input.GetButton("brakeControl"))
+            if (Input.GetButton(brakeControl))
             {
                 audioManager.Stop(accelerationAudio);
+                smoke_ps.Stop();
             }
         }
     }
@@ -78,10 +85,6 @@ public class Car : MonoBehaviour
             {
                 rb.AddForce(transform.up * speed);
             }
-
-
-
-
 
             if (Input.GetButton(brakeControl) && driftFactor == driftFactorSticky)
             {

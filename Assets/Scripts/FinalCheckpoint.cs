@@ -21,12 +21,10 @@ public class FinalCheckpoint : MonoBehaviour
         {
             if (collider.tag == tag)
             {
-                Debug.Log("cheguei");
                 Car car = collider.GetComponent<Car>();
                 car.current_lap += 1;
                 if (car.current_lap > 3)
                 {
-                    Debug.Log(car.id + " WINS");
                 }
                 else if (car.current_lap <= 3)
                 {
@@ -34,8 +32,6 @@ public class FinalCheckpoint : MonoBehaviour
                     {
                         checkpoint.is_active = false;
                     }
-
-                    Debug.Log(car.id + " Lap: " + car.current_lap);
                 }
             }
         }

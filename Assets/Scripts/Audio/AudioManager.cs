@@ -21,11 +21,11 @@ public class AudioManager : MonoBehaviour
 
             sound.source.clip = sound.clip;
 
-            if (sound.name == "Music")
+            if (sound.group == "Music")
             {
                 sound.source.outputAudioMixerGroup = musicGroup;
                 sound.source.loop = true;
-                sound.source.playOnAwake = true;
+                sound.source.playOnAwake = false;
             }
             else if (sound.group == "Foley")
             {

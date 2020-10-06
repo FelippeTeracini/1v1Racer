@@ -21,6 +21,13 @@ public class TextUpdater : MonoBehaviour
     public Text countdown1;
     public Text countdown2;
 
+    public GameObject howto1;
+    public GameObject howto2;
+    public GameObject BG1;
+    public GameObject BG2;
+    public GameObject BG1_2;
+    public GameObject BG2_2;
+
     public AudioManager audioManager;
 
     // Start is called before the first frame update
@@ -30,6 +37,12 @@ public class TextUpdater : MonoBehaviour
         lap2.text = "Lap: " + player2.current_lap + "/3";
         restart1.text = "Press Start or R to start";
         restart2.text = "Press Start or R to start";
+        howto1.SetActive(true);
+        howto2.SetActive(true);
+        BG1.SetActive(true);
+        BG2.SetActive(true);
+        BG1_2.SetActive(false);
+        BG2_2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,6 +54,8 @@ public class TextUpdater : MonoBehaviour
             restart1.text = "Press Start or R to restart";
             victory2.text = "Player " + gameManager.winner + " WINS!";
             restart2.text = "Press Start or R to restart";
+            BG1_2.SetActive(true);
+            BG2_2.SetActive(true);
         }
         if (player1.current_lap <= 3)
         {
@@ -56,6 +71,10 @@ public class TextUpdater : MonoBehaviour
     {
         restart1.text = "";
         restart2.text = "";
+        howto1.SetActive(false);
+        howto2.SetActive(false);
+        BG1.SetActive(false);
+        BG2.SetActive(false);
         countdown1.text = "3";
         countdown2.text = "3";
         audioManager.Play("beep");
@@ -73,6 +92,7 @@ public class TextUpdater : MonoBehaviour
         countdown2.text = "GO!";
         player2.started = true;
         audioManager.Play("final_beep");
+        audioManager.Play("BGMusic");
         yield return new WaitForSeconds(0.5f);
         countdown1.text = "";
         countdown2.text = "";
